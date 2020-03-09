@@ -1,3 +1,6 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.0
-ADD info.sh /tmp
-CMD /tmp/info.sh
+FROM docker.io/centos:7
+RUN mkdir /opt/src
+WORKDIR /opt/src
+COPY index.html /opt/src
+EXPOSE 8080
+CMD python -m SimpleHTTPServer 8080
