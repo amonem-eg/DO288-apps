@@ -11,6 +11,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+print "<h1>List of Friends</h1>";
+
 $sql = "SELECT id, firstname, lastname FROM MyGuests";
 $result = $conn->query($sql);
 
