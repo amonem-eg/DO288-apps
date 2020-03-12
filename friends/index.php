@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-print "<h1><font color=red>List of Friends v9</font></h1>";
+print "<h1><font color=blue>List of Friends v10</font></h1>";
 
 $sql = "SELECT id, firstname, lastname FROM MyGuests";
 $result = $conn->query($sql);
